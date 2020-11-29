@@ -1,0 +1,10 @@
+.body{
+    background-image: url('../img/fondo.jpeg');
+}
+.container{
+    text-align: center;
+    
+}
+.login{
+    margin-top: 100px;
+}
