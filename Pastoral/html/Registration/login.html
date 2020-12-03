@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,16 +10,22 @@
     <title>Login</title>
 </head>
 <body>
+    {% load socialaccount %}
     <div class="container">
         <div class="login">
             <h2>Login</h2>
             <form action="" method="POST">
                 {% csrf_token %}
-                <table class="table">
-                    {{ form.as_table }}
-                </table>        
+                
+                {{ form|crispy }}
+                
                 <input type="submit"  value="Acceder" class="btn btn-secondary">
+                <a href="{% url 'registrar' %}"><input type="button"  value="Registrar" class="btn btn-secondary"></a>
                 <br>
+                <br>
+                <a href="{% url 'social:begin' 'facebook' %}">Login con facebook</a>
+                <br>
+                <a href="{% provider_login_url 'google' %}">Login con Google</a>
             </form>
         </div>
     </div>

@@ -14,10 +14,14 @@ from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+SOCIAL_AUTH_FACEBOOK_KEY = '2427881034187748'
+SOCIAL_AUTH_FACEBOOK_SECRET = '6698a27c22483df3a2e163788ffc4dfd'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-LOGIN_REDIRECT_URL = '/index'
-LOGOUT_REDIRECT_URL = '/index'
+LOGIN_REDIRECT_URL = '/index2'
+LOGOUT_REDIRECT_URL = '/index2'
 STATICFILES_DIRS =['C:\dwy\Pastoral\Pastoral\static']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -41,7 +45,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
+    'social_django',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'crispy_forms',
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -51,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'Pastoral.urls'
@@ -66,6 +79,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -120,5 +136,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+AUTHENTICATION_BACKENDS = (
+'social_core.backends.facebook.FacebookOAuth2',
+'django.contrib.auth.backends.ModelBackend',
+)
+
 
 STATIC_URL = '/static/'

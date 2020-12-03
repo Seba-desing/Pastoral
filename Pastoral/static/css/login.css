@@ -1,10 +1,19 @@
-.body{
-    background-image: url('../img/fondo.jpeg');
+body
+{
+    background-color: #f5dcb3;
 }
 .container{
+    max-width: 1300px;
+    height: 720px;
     text-align: center;
-    
+    background-image: url('fondo3.png');
+    background-size: cover;
+   
 }
-.login{
-    margin-top: 100px;
+
+    
+   
+.back
+{
+    padding: 200px;
 }
