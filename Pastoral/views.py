@@ -24,7 +24,7 @@ def registrar_usuario(request):
             password = formulario.cleaned_data['password1']
             user = authenticate(username = username, password = password)
             login(request, user)
-            return redirect(to='/index/')
+            return redirect(to='/index2/')
     return render(request,'Registration/registrar.html',data)
 def index2(request):
     return render(request,"index2.html")
