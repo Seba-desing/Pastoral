@@ -69,11 +69,26 @@
 	width: 250px;
 	background-image: url('../img/descarga.jpg');
 	float: right;
-	margin-top: 620px;
+	margin-top: 500px;
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.4);
+
+}
+.cerrar2
+{
+	height: 40px;
+	width: 250px;
+	background-image: url('../img/descarga.jpg');
+	float: right;
+	margin-top: 20px;
 	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.4);
 }
 
+
 .cerrar:hover
+{
+	width: 270px;
+}
+.cerrar2:hover
 {
 	width: 270px;
 }
@@ -98,3 +113,44 @@ button:hover
 {
 	transform: scale(1.01,1.01);
 }
+.cerrar ul{
+	text-decoration: none;
+	list-style: none;
+}
+.cerrar2 ul{
+	
+	list-style: none;
+}
+.cerrar ul li a{
+	text-decoration: none;
+	color: white;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: 17px;
+}
+.cerrar2 ul li a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	padding-top: 20px;
+	font-size: 17px;
+}
+.historial{
+	color: white;
+	justify-content: center;
+}
+.historial
+{
+	height: 40px;
+	width: 250px;
+	background-image: url('../img/descarga.jpg');
+	float: right;
+	margin-top: 20px;
+	box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+.historial a{
+	padding-left: 20px;
+	text-decoration: none;
+	color: white;
+}
+

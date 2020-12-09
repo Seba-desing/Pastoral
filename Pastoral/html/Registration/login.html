@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
     <title>Login</title>
+    <style>
+        #foo
+        {
+            box-sizing: border-box;
+            background-color: #5f5c5c;
+            height:250px;
+            width: 100%;
+            text-align: center;
+            padding-top:20px ;
+            margin-top: 145px;
+            opacity: 80%;
+            color: #0e0d0d;
+        }
+        #imagen
+        {
+            max-width: 200px;
+        }
+        #Iglesia
+        {
+            max-width: 200px;
+        }
+    </style>
 </head>
 <body>
     {% load socialaccount %}
@@ -26,7 +48,15 @@
                 <a href="{% url 'social:begin' 'facebook' %}">Login con facebook</a>
                 <br>
                 <a href="{% provider_login_url 'google' %}">Login con Google</a>
-            </form>
+                
+            </form>            
+        </div>
+        <div id="foo" >
+            <img src="{% static 'img/logo_Iglesia.png'%}" alt="" id="Iglesia">
+            <img src="{% static 'img/logocitt.png'%}" alt="" id ="imagen" >
+            <br>
+            <p> Escuela de informática Duoc Uc y CITT Plaza Vespucio en colaboración con la Iglesia de Santiago</p>
+            <p> Desarrollado por Sebastián Lincoqueo y Javiera Olivero </p>
         </div>
     </div>
 </body>

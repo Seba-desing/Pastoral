@@ -22,7 +22,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = '/index2'
 LOGOUT_REDIRECT_URL = '/index2'
-STATICFILES_DIRS =['C:\dwy\Pastoral\Pastoral\static']
+STATICFILES_DIRS =['C:/dwy/Pastoral/Pastoral/static']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
