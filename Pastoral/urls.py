@@ -19,7 +19,7 @@ from .views import tres, seis, registrar_usuario, index2, listar_usuarios
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index2/', index2),
+    path('index2/', index2, name='inicio'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('tres/', tres),
     path('seis/',seis),
